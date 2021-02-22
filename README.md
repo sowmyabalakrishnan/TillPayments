@@ -1,3 +1,38 @@
+#Curl cmd
+1) Get all customers
+curl --location --request GET 'http://localhost:3000/customers'
+
+2)Post a new customer
+curl --location --request POST 'http://localhost:3000/customers' \
+--header 'Content-Type: application/json' \
+--data-raw '  {
+    "id": "010",
+    "merchantId": "004",
+    "name": "Sheldon Cooper"
+  }
+'
+
+3)Delete a customer , given id 
+curl --location --request DELETE 'http://localhost:3000/customers/delete/008'
+
+4)Update Customer details
+curl --location --request PUT 'http://localhost:3000/customers/update' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+        "id": "008",
+        "merchantId": "003",
+        "name": "Simon Augustine"
+    }
+'
+
+5)Get all merchants
+curl --location --request GET 'http://localhost:3000/merchants'
+
+
+6)Get a merchant detail, given id
+curl --location --request GET 'http://localhost:3000/merchants/GET/001'
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
